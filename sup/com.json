@@ -1,0 +1,14 @@
+{
+    "components": [
+        {
+            "filename": "DatasetCard.tsx",
+            "description": "Displays information about a dataset.",
+            "original_code": "\nimport React from 'react';\n\nconst DatasetCard = ({ dataset }) => (\n  <div className=\"dataset-card\">\n    <h2>{dataset.name}</h2>\n    <p>{dataset.description}</p>\n    <button onClick={() => viewDetails(dataset.id)}>View Details</button>\n  </div>\n);\n\nexport default DatasetCard;\n            ",
+            "updated_code": "\nimport React from 'react';\nimport { Card, Button, Typography } from 'shadcn-ui';\n\nconst DatasetCard = ({ dataset }) => (\n  <Card variant=\"slate\" darkMode>\n    <Typography variant=\"h2\">{dataset.name}</Typography>\n    <Typography>{dataset.description}</Typography>\n    <Button variant=\"slate\" onClick={() => viewDetails(dataset.id)}>View Details</Button>\n  </Card>\n);\n\nexport default DatasetCard;\n            "
+        },
+        {
+            "filename": "AppChart.tsx",
+            "description": "Component for rendering charts or graphs."
+        }
+    ]
+}
